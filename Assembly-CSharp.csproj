@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Main\Code\0\Main_0_UICon.cs" />
      <Compile Include="Assets\Main\Code\MainUICon.cs" />
      <Compile Include="Assets\Main\CodTool2.3\ButtBar.cs" />
      <Compile Include="Assets\Main\CodTool2.3\ColliderDetect.cs" />
