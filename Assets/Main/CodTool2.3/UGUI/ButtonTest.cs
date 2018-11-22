@@ -4,12 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class ButtonTest : MonoBehaviour, 
+public class ButtonTest : ButtObj, 
 IPointerClickHandler, //傳統的按下判斷
-IPointerEnterHandler, //滑鼠進入範圍
-IPointerExitHandler,  //滑鼠離開範圍
 IPointerDownHandler,  //滑鼠按下
 IPointerUpHandler,    //滑鼠放開
+IPointerEnterHandler, //滑鼠進入範圍
+IPointerExitHandler,  //滑鼠離開範圍
 IDragHandler          //滑鼠拖動 
 {
 

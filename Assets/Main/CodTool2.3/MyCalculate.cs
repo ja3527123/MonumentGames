@@ -15,7 +15,7 @@ public class MyCalculate : MonoBehaviour {
 	/// </summary>
 	static public GameObject SpObj (GameObject obj,Transform parent,Vector3 Position,string objName = "") {//生產物件（太常用了乾脆這邊弄一個）
 		GameObject a = Instantiate (obj);
-		a.transform.parent = parent;
+		a.transform.SetParent (parent);
 		a.transform.localPosition = Position;
 		a.transform.localScale = obj.transform.localScale;
 		if (objName != "") a.name = objName;

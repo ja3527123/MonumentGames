@@ -17,29 +17,7 @@ public class ObjArray : MonoBehaviour {
 		public UnityEvent ExitEvent;
 	}
 	public Obj[] AllObj;
-	
 
-	[System.Serializable]
-	public struct TestMod {
-		public int TestInt {
-			get {
-				int n = _TestInt;
-				_TestInt ++;
-				return n;
-			}
-			set {
-				_TestInt = value;
-			}
-		}
-		public int _TestInt;
-		public bool TestBool;
-	}
-	public TestMod Test;
-
-	[ContextMenu ("OnOffObj")]
-	public void OnOffObj () {
-		OnOffObj (Test.TestInt, Test.TestBool);
-	}
 	/// <summary>
 	/// 開啟或關閉某個物件 並啟動事件
 	/// </summary>
@@ -60,10 +38,6 @@ public class ObjArray : MonoBehaviour {
 		}
 	}
 
-	[ContextMenu ("OnOffAll")]
-	public void OnOffAll () {
-		OnOffAll (Test.TestBool);
-	}
 	/// <summary>
 	/// 開啟或關閉全部物件
 	/// </summary>
@@ -73,10 +47,6 @@ public class ObjArray : MonoBehaviour {
 		}
 	}
 
-	[ContextMenu ("OnOnlyObjs")]
-	public void OnOnlyObjs () {
-		OnOnlyObjs (Test.TestInt);
-	}
 	/// <summary>
 	/// 關閉全部只留下一個
 	/// </summary>
@@ -100,10 +70,6 @@ public class ObjArray : MonoBehaviour {
 		}
 	}
 
-	[ContextMenu ("ContinuousObj")]
-	public void ContinuousObj () {
-		ContinuousObj (Test.TestInt);
-	}
 	/// <summary>
 	/// 把物件打開到end
 	/// </summary>

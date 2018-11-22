@@ -6,28 +6,42 @@ public class TimeLoop : MonoBehaviour {
 	public Void_IntDel Del;
 	public UnityEvent TheEvent;
 	public float Delay;
-	public float Time = 1;
+	public float Time_F = 1;
 	public int n;
 
-	void Start () {
-		StartCoroutine(StartDel());
-	}
+	public bool IsOpen;//這個開關如果false就會暫停
 
-	public void Open ()
-	{
+	float Next_Time = 0;//當遊戲時間大於這個數時啟動判斷
+
+	public void Open () {
 		enabled = true;
-		StartCoroutine(StartDel());
+		Load_Del ();
+		Next_Time = Time.time + Delay + Time_F;
+		IsOpen = true;
 	}
 
-	public IEnumerator StartDel ()
-	{
-		yield return new WaitForSeconds (Delay);
-		for (;;) {
-			if(Del != null) Del(n);
-			TheEvent.Invoke();
+	public void Reset () {
+		StartCoroutine (_Reset ());
+	}
+	IEnumerator _Reset () {
+		IsOpen = false;
+		n = 0;
+		yield return null;
+		Open ();
+	}
+
+	void Update () {
+		if (!IsOpen) return;
+		if (Time.time > Next_Time) {
 			n++;
-			yield return new WaitForSeconds(Time);
+			Load_Del ();
+			Next_Time = Time.time + Time_F;
 		}
+	}
+
+	public void Load_Del () {
+		if(Del != null) Del(n);
+		TheEvent.Invoke();
 	}
 
 	public void Test () {
