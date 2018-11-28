@@ -53,7 +53,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\DragButt.cs" />
      <Compile Include="Assets\Main\Code\MainUICon.cs" />
      <Compile Include="Assets\Main\CodTool2.3\ColliderDetect.cs" />
      <Compile Include="Assets\Main\CodTool2.3\DelCon.cs" />
@@ -72,18 +71,26 @@
      <Compile Include="Assets\Main\CodTool2.3\RayDetect.cs" />
      <Compile Include="Assets\Main\CodTool2.3\TestCon.cs" />
      <Compile Include="Assets\Main\CodTool2.3\TimeLoop.cs" />
+     <Compile Include="Assets\Main\CodTool2.3\Tween.cs" />
+     <Compile Include="Assets\Main\CodTool2.3\Tween_Array.cs" />
+     <Compile Include="Assets\Main\CodTool2.3\Tween_Color.cs" />
+     <Compile Include="Assets\Main\CodTool2.3\Tween_Position.cs" />
+     <Compile Include="Assets\Main\CodTool2.3\Tween_Rotation.cs" />
+     <Compile Include="Assets\Main\CodTool2.3\Tween_Size.cs" />
      <Compile Include="Assets\Main\CodTool2.3\TxtCon.cs" />
      <Compile Include="Assets\Main\CodTool2.3\UGUI\ButtObj.cs" />
      <Compile Include="Assets\Main\CodTool2.3\UGUI\ButtonTest.cs" />
+     <Compile Include="Assets\Main\CodTool2.3\UGUI\DragButt.cs" />
+     <Compile Include="Assets\Main\CodTool2.3\UGUI\MoveDragButt.cs" />
      <Compile Include="Assets\Main\CodTool2.3\UGUI\SizeButt.cs" />
      <Compile Include="Assets\Main\CodTool2.3\UGUI\TextSpacing.cs" />
+     <Compile Include="Assets\Main\CodTool2.3\UGUI\UguiTool.cs" />
      <Compile Include="Assets\Main\Game_0\Code\G0_End_UICon.cs" />
      <Compile Include="Assets\Main\Game_0\Code\G0_Main_UICon.cs" />
      <Compile Include="Assets\Main\Game_0\Code\G0_Photo_UICon.cs" />
      <Compile Include="Assets\Main\Game_0\Code\G0_Play_UICon.cs" />
      <Compile Include="Assets\Main\Game_0\Code\G0_Target_UICOn.cs" />
      <Compile Include="Assets\Main\WebGLTest\WebTest.cs" />
-     <Compile Include="Assets\MoveDragButt.cs" />
      <None Include="Assets\Main\NotoSansCJKtc-hinted\LICENSE_OFL.txt" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>/Users/liuzhewei/Desktop/MonumentGames/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>

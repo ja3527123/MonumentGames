@@ -11,7 +11,7 @@ public class Dice<T> : MonoBehaviour {
 	public int GetAInt () {//<核心>抽出一個編號
 		return GetAInt(AllInt);
 	}
-	public int GetAInt (int[] Ns) {
+	static public int GetAInt (int[] Ns) {
 		int Max = 0;//取得機率陣列的總和也就是參數最大值
 		foreach (int i in Ns) {
 			Max += i;
@@ -56,16 +56,13 @@ public class Dice<T> : MonoBehaviour {
 		return r.ToArray ();
 	}
 	public T [] GetATs_NotRepeating () {
-		return GetATs (GetNotRepeatingInts ());
+		return GetATs (GetNotRepeatingInts (AllInt.Length));
 	}
 	
-	public int [] GetNotRepeatingInts () {//取得串不重複的結果陣列
-		return GetNotRepeatingInts (AllInt);
+	public int [] GetNotRepeatingInts (int Size) {//取得串不重複的結果陣列
+		return GetNotRepeatingInts (Size, AllInt);
 	}
-	public int [] GetNotRepeatingInts (int[] thisAllInt) {
-		return GetNotRepeatingInts (thisAllInt.Length, thisAllInt);
-	}
-	public int [] GetNotRepeatingInts (int Size,int[] thisAllInt) {	
+	static public int [] GetNotRepeatingInts (int Size,int[] thisAllInt) {
 		int[] r = new int[Size];
 		for (int i = 0; i < Size; i++) {
 			int n = GetAInt(thisAllInt);
